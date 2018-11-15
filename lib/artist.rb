@@ -9,12 +9,12 @@ class Artist
   def self.find_or_create_by_name(artist_name)
     # artist = @@all.find{|a| a.name == artist_name}
     # return artist if artist
-    # 
+    #
     # artist = Artist.new(artist_name)
 
     @@all.find{|a| a.name == artist_name} || Artist.new(artist_name)
   end
-  
+
   def initialize(name)
     @name = name
     @songs = []
@@ -23,7 +23,7 @@ class Artist
   def self.all
     @@all
   end
-  
+
   def save
     @@all << self
   end
