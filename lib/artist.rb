@@ -16,8 +16,9 @@ class Artist
   end
 
   def print_songs
-
+    
   end
+
   def initialize(name)
     @name = name
     @songs = []
