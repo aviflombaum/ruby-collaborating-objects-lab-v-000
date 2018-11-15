@@ -2,6 +2,19 @@ class Artist
   attr_accessor :name, :songs
   @@all = []
 
+
+  # Failure/Error: artist_1 = Artist.find_or_create_by_name("Michael Jackson")
+  # NoMethodError:
+  #   undefined method `find_or_create_by_name' for Artist:Class
+  def self.find_or_create_by_name(artist_name)
+    # artist = @@all.find{|a| a.name == artist_name}
+    # return artist if artist
+    # 
+    # artist = Artist.new(artist_name)
+
+    @@all.find{|a| a.name == artist_name} || Artist.new(artist_name)
+  end
+  
   def initialize(name)
     @name = name
     @songs = []
