@@ -15,6 +15,9 @@ class Artist
     @@all.find{|a| a.name == artist_name} || Artist.new(artist_name)
   end
 
+  def print_songs
+
+  end
   def initialize(name)
     @name = name
     @songs = []
