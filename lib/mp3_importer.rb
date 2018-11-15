@@ -6,8 +6,10 @@ class MP3Importer
   end
 
   def files
+    long_filenames = Dir[@path+"/*"]
+    # ["./spec/fixtures/mp3s/Action Bronson - Larry Csonka - indie.mp3", ""]
     binding.pry
-    Dir[@path+"/*"]
+    long_filenames.collect{|filename| filename.split("/")}
   end
 
 end
